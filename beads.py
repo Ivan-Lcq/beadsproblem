@@ -1,8 +1,4 @@
-"""
-ID: alex.go2
-LANG: PYTHON3
-TASK: beads
-"""
+
 f = open('beads.in', 'r')
 g = open('beads.out', 'w')
 from collections import deque
@@ -16,19 +12,19 @@ totalnumber = 2
 num = 1
 numx = 1
 isnotwhite = True
-bEqual = True
+allequal = True
 
 for x in range (0, numofbeads):
     beadsarr.append(beads[x])
-nTemp = beadsarr[0]
+firstitem = beadsarr[0]
 for item in beadsarr:
-    if nTemp != item:
-        bEqual = False
+    if firstitem != item:
+        allequal = False
         break;
 
 
-if bEqual:
-    if nTemp == 'w':
+if allequal:
+    if firstitem == 'w':
         isnotwhite = False
 beadsarrn = beadsarr 
 if isnotwhite == True:
@@ -78,10 +74,10 @@ if isnotwhite == True:
         beadsarr = [beadsarr[-1]] + beadsarr[:-1]
 
 for item in beadsarr:
-    if nTemp != item:
-        bEqual = False
+    if firstitem != item:
+        allequal = False
         break;
-if bEqual == True:
+if allequal == True:
     finaltotalnumber = numofbeads
 g.write(str(finaltotalnumber))
 g.write("\n")
