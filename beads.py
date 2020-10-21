@@ -81,4 +81,5 @@ if allequal == True:
     finaltotalnumber = numofbeads
 g.write(str(finaltotalnumber))
 g.write("\n")
+f.close()
 g.close()
